@@ -41,6 +41,43 @@ const pessoas = [
 // const manipEnd = manipObject();
 console.log(manipObject());
 
+function agruparPorCategoria() {
+  return produtos.reduce((precoTotal, produto) => {
+    if (produto.categoria === "livros") {
+      precoTotal.livros = (precoTotal.livros || 0) + produto.preco;
+    }
+    if (produto.categoria === "eletronicos") {
+      precoTotal.eletronicos = (precoTotal.eletronicos || 0) + produto.preco;
+    }
+    if (produto.categoria === "roupas") {
+      precoTotal.roupas = (precoTotal.roupas || 0) + produto.preco;
+    }
+    return precoTotal;
+  }, {});
+}
+
+const produtos = [
+  { categoria: "eletronicos", preco: 99.99 },
+  {
+    categoria: "livros",
+    preco: 19.99,
+  },
+  {
+    categoria: "eletronicos",
+    preco: 199.99,
+  },
+  {
+    categoria: "livros",
+    preco: 29.99,
+  },
+  {
+    categoria: "roupas",
+    preco: 49.99,
+  },
+];
+
+console.log(agruparPorCategoria());
+
 // Decdlarando arrays
 // const mulherMaravilha = "outraMulher maravilha";
 
