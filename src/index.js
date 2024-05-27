@@ -79,6 +79,7 @@ const produtos = [
 
 console.log(agruparPorCategoria());
 
+// exercicio 4
 function contador() {
   let interValue = 0;
 
@@ -92,6 +93,21 @@ const valueCurrent = contador();
 
 console.log(valueCurrent());
 console.log(valueCurrent());
+console.log(valueCurrent());
+
+let valueCurrent2 = contador();
+
+console.log(valueCurrent2());
+console.log(valueCurrent2());
+
+// exercicio 5
+
+function calculoProdutos() {
+  return numbers.reduce((acumulado, resultado) => {
+    return acumulado + resultado;
+  }, 0);
+}
+console.log(calculoProdutos());
 
 // Decdlarando arrays
 // const mulherMaravilha = "outraMulher maravilha";
