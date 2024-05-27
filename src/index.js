@@ -109,6 +109,21 @@ function calculoProdutos() {
 }
 console.log(calculoProdutos());
 
+// exercicio 6
+
+function transformarArray() {
+  return numbers.map((numero) => {
+    return dobrarNumbers(numero);
+  });
+  return newArray;
+}
+
+function dobrarNumbers(numero) {
+  return numero * 2;
+}
+
+console.log(transformarArray());
+
 // Decdlarando arrays
 // const mulherMaravilha = "outraMulher maravilha";
 
