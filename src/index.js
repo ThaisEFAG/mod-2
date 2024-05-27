@@ -38,6 +38,7 @@ const pessoas = [
   },
 ];
 
+// exercicio 3
 // const manipEnd = manipObject();
 console.log(manipObject());
 
@@ -77,6 +78,20 @@ const produtos = [
 ];
 
 console.log(agruparPorCategoria());
+
+function contador() {
+  let interValue = 0;
+
+  return function () {
+    interValue++;
+    return interValue;
+  };
+}
+
+const valueCurrent = contador();
+
+console.log(valueCurrent());
+console.log(valueCurrent());
 
 // Decdlarando arrays
 // const mulherMaravilha = "outraMulher maravilha";
