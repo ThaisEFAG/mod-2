@@ -115,7 +115,6 @@ function transformarArray() {
   return numbers.map((numero) => {
     return dobrarNumbers(numero);
   });
-  return newArray;
 }
 
 function dobrarNumbers(numero) {
@@ -123,6 +122,26 @@ function dobrarNumbers(numero) {
 }
 
 console.log(transformarArray());
+
+// exercicio 7
+
+function compor(somar1, multiplicar2, x) {
+  let resultado = somar1(x);
+  resultado = multiplicar2(resultado);
+  return resultado;
+  // return somar1(multiplicar2(x));
+}
+
+function somar1(x) {
+  return x + 1;
+}
+
+function multiplicar2(x) {
+  return x * 2;
+}
+
+let resultEnd = compor(somar1, multiplicar2, 6);
+console.log(resultEnd);
 
 // Decdlarando arrays
 // const mulherMaravilha = "outraMulher maravilha";
